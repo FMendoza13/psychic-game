@@ -39,4 +39,4 @@
             document.getElementById("losses").innerHTML = "losses: " + losses;
             }
            
-           }
+           };
