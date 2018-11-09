@@ -10,32 +10,33 @@
         
         var guesses = 10;
 
-        var userGuess = [];
+        var guessesMade = [];
 
         var computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
 
         console.log(computerLetter)
-        console.log(userGuess)
+        console.log(guessesMade)
         console.log(guesses)
         
         
         document.onkeypress = function(event) {
             var userGuess = event.key;
+            left--;
+            guessesMade.push(userGuess)
 
-            if(userGuess === computerLetter) {
+            var userGuess = function() {
+                document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
+            }
+
+            if(guessesMade === computerLetter) {
                 wins++;
+                document.getElementById("wins").innerHTML = "Wins: " + wins;
             } else{
                 guesses--;
             }
             if(guesses = 0) {
-                losses++
+                losses++;
+            document.getElementById("losses").innerHTML = "losses: " + losses;
             }
-          
-        
-            document.getElementById(wins).innerHTML = "Wins: " + wins;
-           
-           document.getElementById(losses).innerHTML = "losses: " + losses;
-          
-           document.getElementById(guesses).innerHTML = "Guesses left: " + guesses;
            
            }
