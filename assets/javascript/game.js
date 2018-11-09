@@ -10,10 +10,21 @@
         
         var guesses = 10;
 
-        var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+        var computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
 
-        console.log(computerGuess)
+        console.log(computerLetter)
         
-        // function generateRandomLetter = (guess) {
+        document.onkeypress = function(event) {
+            var userGuess = event.key;
+
+            if(userGuess === computerLetter) {
+                wins++;
+            } else{
+                guesses--;
+            }
+            if(guesses = 0) {
+                losses++
+            }
+        }
 
         
