@@ -10,9 +10,14 @@
         
         var guesses = 10;
 
+        var userGuess = [];
+
         var computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
 
         console.log(computerLetter)
+        console.log(userGuess)
+        console.log(guesses)
+        
         
         document.onkeypress = function(event) {
             var userGuess = event.key;
@@ -25,12 +30,12 @@
             if(guesses = 0) {
                 losses++
             }
-           
-            document.getElementById('wins').innerHTML = "Wins: " + wins;
-           
-            document.getElementById('losses').innerHTML = "losses: " + losses;
-           
-            document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
-        }
-
+          
         
+            document.getElementById(wins).innerHTML = "Wins: " + wins;
+           
+           document.getElementById(losses).innerHTML = "losses: " + losses;
+          
+           document.getElementById(guesses).innerHTML = "Guesses left: " + guesses;
+           
+           }
