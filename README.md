@@ -1,4 +1,4 @@
-# psychic-game
+# Psychic-Game
 
 # Getting started
 This is my psychic game that I put together.  The rules of the game is that the website will choose a random letter of the alphabet and the player will have 10 tries to guess which letter was chosen.  If they are able to guess which letter was chosen, the player wins.  If not by their tenth try, the player loses.  Enjoy!  
